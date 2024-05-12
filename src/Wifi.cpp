@@ -462,7 +462,8 @@ void Wifi::SetStatus(u32 status)
 {
     // TODO, eventually: states 2/4/7
     u16 rfpins[10] = {0x04, 0x84, 0, 0x46, 0, 0x84, 0x87, 0, 0x46, 0x04};
-    IOPORT(W_RFStatus) = status;
+    // IOPORT(W_RFStatus) = status;
+    IOPORT(W_RFStatus) = 9;
     IOPORT(W_RFPins) = rfpins[status];
 }
 
